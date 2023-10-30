@@ -87,5 +87,9 @@ from sakila.customer a
                on b.city_id=c.city_id) d
    on a.address_id=d.address_id;
    
-      
+select count(customer_id) from sakila.customer;
+select
+  SUM(IF(gender = 'female', 1, 0)) AS 'Female',
+  SUM(IF(gender = 'male', 1, 0)) AS 'Male'
+from customer;
       
